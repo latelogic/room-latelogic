@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RoomPoints - Fly Business Class for Economy Prices</title>
+    <title>RoomPoints - Stay in Luxury Suites for Free</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
@@ -31,11 +31,11 @@
             <div class="flex justify-between h-16 items-center">
                 <div class="flex items-center">
                     <a href="/" class="flex-shrink-0 flex items-center gap-2">
-                        <i class="fa-solid fa-plane-departure text-blue-600 text-2xl"></i>
+                        <i class="fa-solid fa-hotel text-blue-600 text-2xl"></i>
                         <span class="font-bold text-xl tracking-tight text-gray-900">RoomPoints</span>
                     </a>
                     <div class="hidden md:ml-10 md:flex md:space-x-8">
-                        <a href="/search.html" class="text-gray-500 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Search Flights</a>
+                        <a href="/search.html" class="text-gray-500 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Search Hotels</a>
                         <a href="/how-it-works.html" class="text-gray-500 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">How it Works</a>
                         <a href="/pricing.html" class="text-gray-500 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Pricing</a>
                     </div>
@@ -56,31 +56,37 @@
                     <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
                     <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
                 </span>
-                New: Real-time availability for 150+ airlines
+                New: Real-time availability for 5,000+ Luxury Properties
             </div>
             
             <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-6">
-                Fly <span class="gradient-text">Business Class</span><br>for Economy Prices.
+                Stay in <span class="gradient-text">Luxury Suites</span><br>for Free.
             </h1>
             
             <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-600 mb-10 leading-relaxed">
-                Stop wasting your credit card points on gift cards. We find the hidden award availability that saves you thousands on every flight.
+                Stop wasting your credit card points on gift cards. We find the hidden "Standard Room" award availability that unlocks 5-star hotels for pennies.
             </p>
 
             <!-- Interactive Search Demo -->
-            <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl border border-gray-100 p-2 transform transition-all hover:scale-[1.01]">
+            <div class="max-w-5xl mx-auto bg-white rounded-2xl shadow-xl border border-gray-100 p-2 transform transition-all hover:scale-[1.01]">
                 <div class="flex flex-col md:flex-row gap-2">
-                    <div class="flex-1 relative group">
+                    <div class="flex-[2] relative group">
                         <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                            <i class="fa-solid fa-plane-departure text-gray-400"></i>
+                            <i class="fa-solid fa-location-dot text-gray-400"></i>
                         </div>
-                        <input type="text" class="block w-full pl-11 pr-4 py-4 rounded-xl border-0 ring-1 ring-gray-200 focus:ring-2 focus:ring-blue-500 text-gray-900 placeholder-gray-400 bg-gray-50 focus:bg-white transition-all" placeholder="From (e.g. JFK)">
+                        <input type="text" class="block w-full pl-11 pr-4 py-4 rounded-xl border-0 ring-1 ring-gray-200 focus:ring-2 focus:ring-blue-500 text-gray-900 placeholder-gray-400 bg-gray-50 focus:bg-white transition-all" placeholder="Where are you going? (e.g. Kyoto)">
                     </div>
                     <div class="flex-1 relative group">
                         <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                            <i class="fa-solid fa-plane-arrival text-gray-400"></i>
+                            <i class="fa-regular fa-calendar text-gray-400"></i>
                         </div>
-                        <input type="text" class="block w-full pl-11 pr-4 py-4 rounded-xl border-0 ring-1 ring-gray-200 focus:ring-2 focus:ring-blue-500 text-gray-900 placeholder-gray-400 bg-gray-50 focus:bg-white transition-all" placeholder="To (e.g. LHR)">
+                        <input type="text" class="block w-full pl-11 pr-4 py-4 rounded-xl border-0 ring-1 ring-gray-200 focus:ring-2 focus:ring-blue-500 text-gray-900 placeholder-gray-400 bg-gray-50 focus:bg-white transition-all" placeholder="Check-in - Check-out">
+                    </div>
+                    <div class="flex-1 relative group">
+                        <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                            <i class="fa-solid fa-user text-gray-400"></i>
+                        </div>
+                        <input type="text" class="block w-full pl-11 pr-4 py-4 rounded-xl border-0 ring-1 ring-gray-200 focus:ring-2 focus:ring-blue-500 text-gray-900 placeholder-gray-400 bg-gray-50 focus:bg-white transition-all" placeholder="2 Guests">
                     </div>
                     <button class="bg-gray-900 text-white px-8 py-4 rounded-xl font-medium hover:bg-black transition-colors flex items-center justify-center gap-2 min-w-[140px]">
                         <i class="fa-solid fa-search"></i> Search
@@ -106,8 +112,8 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-end mb-12">
                 <div>
-                    <h2 class="text-3xl font-bold text-gray-900">Live Flight Deals</h2>
-                    <p class="mt-2 text-gray-500">Just found by our members in the last hour.</p>
+                    <h2 class="text-3xl font-bold text-gray-900">Live Hotel Awards</h2>
+                    <p class="mt-2 text-gray-500">Rare availability just found by our members.</p>
                 </div>
                 <a href="/search.html" class="text-blue-600 font-medium hover:text-blue-700 flex items-center gap-1 group">
                     View all deals <i class="fa-solid fa-arrow-right transform group-hover:translate-x-1 transition-transform"></i>
@@ -117,69 +123,69 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Deal Card 1 -->
                 <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm card-hover transition-all duration-300 group cursor-pointer relative overflow-hidden">
-                    <div class="absolute top-0 right-0 bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-bl-xl">SAVE 85%</div>
+                    <div class="absolute top-0 right-0 bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-bl-xl">SAVE 90%</div>
                     <div class="flex justify-between items-start mb-4">
                         <div class="flex flex-col">
-                            <span class="text-2xl font-bold text-gray-900">JFK <i class="fa-solid fa-arrow-right text-gray-300 text-sm mx-1"></i> CDG</span>
-                            <span class="text-sm text-gray-500">Business Class • Virgin Atlantic</span>
+                            <span class="text-xl font-bold text-gray-900">Park Hyatt Tokyo</span>
+                            <span class="text-sm text-gray-500">5-Star Luxury • Shinjuku</span>
                         </div>
-                        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/98/Virgin_Atlantic_logo.svg/1200px-Virgin_Atlantic_logo.svg.png" alt="Virgin" class="h-8 object-contain">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Park_Hyatt_logo.svg/2560px-Park_Hyatt_logo.svg.png" alt="Park Hyatt" class="h-8 object-contain">
                     </div>
                     <div class="flex items-end justify-between mt-6 pt-6 border-t border-gray-50">
                         <div>
                             <p class="text-xs text-gray-400 uppercase font-medium">Cash Price</p>
-                            <p class="text-gray-500 line-through">$4,250</p>
+                            <p class="text-gray-500 line-through">$1,200/night</p>
                         </div>
                         <div class="text-right">
                             <p class="text-xs text-blue-600 font-bold uppercase mb-1">You Pay</p>
-                            <p class="text-3xl font-bold text-gray-900">15k <span class="text-base font-normal text-gray-500">pts</span></p>
-                            <p class="text-xs text-gray-400">+$52 taxes</p>
+                            <p class="text-3xl font-bold text-gray-900">30k <span class="text-base font-normal text-gray-500">pts</span></p>
+                            <p class="text-xs text-gray-400">No Resort Fees</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Deal Card 2 -->
                 <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm card-hover transition-all duration-300 group cursor-pointer relative overflow-hidden">
-                    <div class="absolute top-0 right-0 bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-bl-xl">SAVE 92%</div>
+                    <div class="absolute top-0 right-0 bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-bl-xl">SAVE 95%</div>
                     <div class="flex justify-between items-start mb-4">
                         <div class="flex flex-col">
-                            <span class="text-2xl font-bold text-gray-900">SFO <i class="fa-solid fa-arrow-right text-gray-300 text-sm mx-1"></i> TYO</span>
-                            <span class="text-sm text-gray-500">First Class • ANA</span>
+                            <span class="text-xl font-bold text-gray-900">Waldorf Astoria Maldives</span>
+                            <span class="text-sm text-gray-500">Overwater Villa • Ithaafushi</span>
                         </div>
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/All_Nippon_Airways_Logo.svg/2560px-All_Nippon_Airways_Logo.svg.png" alt="ANA" class="h-6 object-contain">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Waldorf_Astoria_Hotels_%26_Resorts_logo.svg/2560px-Waldorf_Astoria_Hotels_%26_Resorts_logo.svg.png" alt="Waldorf" class="h-8 object-contain">
                     </div>
                     <div class="flex items-end justify-between mt-6 pt-6 border-t border-gray-50">
                         <div>
                             <p class="text-xs text-gray-400 uppercase font-medium">Cash Price</p>
-                            <p class="text-gray-500 line-through">$12,500</p>
+                            <p class="text-gray-500 line-through">$2,800/night</p>
                         </div>
                         <div class="text-right">
                             <p class="text-xs text-blue-600 font-bold uppercase mb-1">You Pay</p>
-                            <p class="text-3xl font-bold text-gray-900">45k <span class="text-base font-normal text-gray-500">pts</span></p>
-                            <p class="text-xs text-gray-400">+$80 taxes</p>
+                            <p class="text-3xl font-bold text-gray-900">120k <span class="text-base font-normal text-gray-500">pts</span></p>
+                            <p class="text-xs text-gray-400">5th Night Free</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Deal Card 3 -->
                 <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm card-hover transition-all duration-300 group cursor-pointer relative overflow-hidden">
-                    <div class="absolute top-0 right-0 bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-bl-xl">SAVE 70%</div>
+                    <div class="absolute top-0 right-0 bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-bl-xl">SAVE 82%</div>
                     <div class="flex justify-between items-start mb-4">
                         <div class="flex flex-col">
-                            <span class="text-2xl font-bold text-gray-900">LAX <i class="fa-solid fa-arrow-right text-gray-300 text-sm mx-1"></i> SYD</span>
-                            <span class="text-sm text-gray-500">Business Class • Qantas</span>
+                            <span class="text-xl font-bold text-gray-900">The Ritz-Carlton Kyoto</span>
+                            <span class="text-sm text-gray-500">Luxury • Kamogawa River</span>
                         </div>
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Qantas_Airways_logo_2016.svg/1200px-Qantas_Airways_logo_2016.svg.png" alt="Qantas" class="h-6 object-contain">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Ritz-Carlton_logo.svg/2560px-Ritz-Carlton_logo.svg.png" alt="Ritz" class="h-6 object-contain">
                     </div>
                     <div class="flex items-end justify-between mt-6 pt-6 border-t border-gray-50">
                         <div>
                             <p class="text-xs text-gray-400 uppercase font-medium">Cash Price</p>
-                            <p class="text-gray-500 line-through">$6,800</p>
+                            <p class="text-gray-500 line-through">$1,850/night</p>
                         </div>
                         <div class="text-right">
                             <p class="text-xs text-blue-600 font-bold uppercase mb-1">You Pay</p>
-                            <p class="text-3xl font-bold text-gray-900">55k <span class="text-base font-normal text-gray-500">pts</span></p>
-                            <p class="text-xs text-gray-400">+$65 taxes</p>
+                            <p class="text-3xl font-bold text-gray-900">85k <span class="text-base font-normal text-gray-500">pts</span></p>
+                            <p class="text-xs text-gray-400">+$0 taxes</p>
                         </div>
                     </div>
                 </div>
@@ -192,9 +198,9 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div>
-                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Stop searching airline by airline.</h2>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Stop searching hotel by hotel.</h2>
                     <p class="text-lg text-gray-600 mb-8 leading-relaxed">
-                        Airlines hide their best seats. We scan 30+ airline loyalty programs simultaneously to find the "Saver" award space that isn't shown on Google Flights or Expedia.
+                        Hotels hide their best rooms from point bookings. We scan Hyatt, Marriott, Hilton, and IHG simultaneously to find the "Standard Room" availability that isn't always easy to find.
                     </p>
                     
                     <div class="space-y-6">
@@ -204,7 +210,7 @@
                             </div>
                             <div>
                                 <h3 class="font-bold text-gray-900 mb-1">Instant Transfer Instructions</h3>
-                                <p class="text-gray-500 text-sm">We tell you exactly which credit card points to transfer (Amex, Chase, Citi) to book the flight.</p>
+                                <p class="text-gray-500 text-sm">We tell you exactly which credit card points to transfer (Amex, Chase, Citi) to book the room.</p>
                             </div>
                         </div>
                         <div class="flex gap-4">
@@ -213,7 +219,7 @@
                             </div>
                             <div>
                                 <h3 class="font-bold text-gray-900 mb-1">Availability Alerts</h3>
-                                <p class="text-gray-500 text-sm">Set an alert for "JFK to Tokyo in July" and we'll text you the second a seat opens up.</p>
+                                <p class="text-gray-500 text-sm">Set an alert for "Waldorf Astoria Maldives in December" and we'll text you the second a room opens up.</p>
                             </div>
                         </div>
                         <div class="flex gap-4">
@@ -229,7 +235,7 @@
                 </div>
                 <div class="relative">
                     <div class="absolute -inset-4 bg-gradient-to-r from-blue-100 to-purple-100 rounded-full blur-3xl opacity-50"></div>
-                    <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Business Class Seat" class="relative rounded-2xl shadow-2xl border-4 border-white transform rotate-2 hover:rotate-0 transition-transform duration-500">
+                    <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Luxury Hotel Suite" class="relative rounded-2xl shadow-2xl border-4 border-white transform rotate-2 hover:rotate-0 transition-transform duration-500">
                     
                     <!-- Floating Badge -->
                     <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-xl border border-gray-100 flex gap-3 items-center animate-bounce duration-[3000ms]">
@@ -238,7 +244,7 @@
                         </div>
                         <div>
                             <p class="text-xs text-gray-400 font-bold uppercase">Booking Success</p>
-                            <p class="text-sm font-bold text-gray-900">Seat Confirmed</p>
+                            <p class="text-sm font-bold text-gray-900">Room Confirmed</p>
                         </div>
                     </div>
                 </div>
@@ -252,17 +258,17 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
                 <div>
                     <div class="flex items-center gap-2 mb-6">
-                        <i class="fa-solid fa-plane-departure text-blue-500 text-2xl"></i>
+                        <i class="fa-solid fa-hotel text-blue-500 text-2xl"></i>
                         <span class="font-bold text-xl tracking-tight">RoomPoints</span>
                     </div>
                     <p class="text-gray-400 text-sm leading-relaxed">
-                        Helping travelers see the world in luxury for pennies on the dollar. Join 50,000+ members today.
+                        Helping travelers stay in luxury for pennies on the dollar. Join 50,000+ members today.
                     </p>
                 </div>
                 <div>
                     <h4 class="font-bold text-white mb-6">Product</h4>
                     <ul class="space-y-4 text-sm text-gray-400">
-                        <li><a href="/search.html" class="hover:text-blue-400 transition-colors">Search Flights</a></li>
+                        <li><a href="/search.html" class="hover:text-blue-400 transition-colors">Search Hotels</a></li>
                         <li><a href="/pricing.html" class="hover:text-blue-400 transition-colors">Pricing</a></li>
                         <li><a href="#" class="hover:text-blue-400 transition-colors">API Access</a></li>
                     </ul>

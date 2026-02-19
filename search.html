@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search Flights - RoomPoints</title>
+    <title>Search Hotels - RoomPoints</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
@@ -18,7 +18,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
                 <a href="/" class="flex items-center gap-2">
-                    <i class="fa-solid fa-plane-departure text-blue-600 text-xl"></i>
+                    <i class="fa-solid fa-hotel text-blue-600 text-xl"></i>
                     <span class="font-bold text-lg text-gray-900">RoomPoints</span>
                 </a>
                 <div class="flex items-center gap-4">
@@ -35,21 +35,32 @@
             <div class="flex flex-col md:flex-row gap-2">
                 <div class="flex-1 relative">
                     <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400">
-                        <i class="fa-solid fa-plane-departure"></i>
+                        <i class="fa-solid fa-location-dot"></i>
                     </div>
-                    <input type="text" class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="Origin (e.g. JFK)" value="JFK">
+                    <input type="text" class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="Destination (e.g. Kyoto)" value="Kyoto, Japan">
                 </div>
-                <div class="flex-1 relative">
-                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400">
-                        <i class="fa-solid fa-plane-arrival"></i>
-                    </div>
-                    <input type="text" class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="Destination (e.g. LHR)" value="LHR">
-                </div>
-                <div class="w-full md:w-48 relative">
+                <div class="w-full md:w-64 relative">
                     <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400">
                         <i class="fa-regular fa-calendar"></i>
                     </div>
-                    <input type="date" class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" value="2026-07-15">
+                    <input type="date" class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" value="2026-11-10">
+                </div>
+                <div class="w-full md:w-64 relative">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400">
+                        <i class="fa-regular fa-calendar"></i>
+                    </div>
+                    <input type="date" class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" value="2026-11-15">
+                </div>
+                 <div class="w-full md:w-40 relative">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <select class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                        <option>1 Guest</option>
+                        <option selected>2 Guests</option>
+                        <option>3 Guests</option>
+                        <option>4 Guests</option>
+                    </select>
                 </div>
                 <button class="bg-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors">
                     Search
@@ -65,32 +76,36 @@
             <!-- Filters Sidebar -->
             <div class="w-full lg:w-64 flex-shrink-0 space-y-6">
                 <div>
-                    <h3 class="text-sm font-bold text-gray-900 mb-3 uppercase tracking-wide">Stops</h3>
+                    <h3 class="text-sm font-bold text-gray-900 mb-3 uppercase tracking-wide">Hotel Chain</h3>
                     <div class="space-y-2">
                         <label class="flex items-center gap-2">
                             <input type="checkbox" checked class="rounded text-blue-600 focus:ring-blue-500">
-                            <span class="text-sm text-gray-600">Non-stop</span>
+                            <span class="text-sm text-gray-600">Hyatt</span>
+                        </label>
+                        <label class="flex items-center gap-2">
+                            <input type="checkbox" checked class="rounded text-blue-600 focus:ring-blue-500">
+                            <span class="text-sm text-gray-600">Marriott</span>
+                        </label>
+                        <label class="flex items-center gap-2">
+                            <input type="checkbox" checked class="rounded text-blue-600 focus:ring-blue-500">
+                            <span class="text-sm text-gray-600">Hilton</span>
                         </label>
                         <label class="flex items-center gap-2">
                             <input type="checkbox" class="rounded text-blue-600 focus:ring-blue-500">
-                            <span class="text-sm text-gray-600">1 Stop</span>
+                            <span class="text-sm text-gray-600">IHG</span>
                         </label>
                     </div>
                 </div>
                 <div>
-                    <h3 class="text-sm font-bold text-gray-900 mb-3 uppercase tracking-wide">Cabin Class</h3>
+                    <h3 class="text-sm font-bold text-gray-900 mb-3 uppercase tracking-wide">Star Rating</h3>
                     <div class="space-y-2">
                         <label class="flex items-center gap-2">
-                            <input type="checkbox" class="rounded text-blue-600 focus:ring-blue-500">
-                            <span class="text-sm text-gray-600">Economy</span>
-                        </label>
-                        <label class="flex items-center gap-2">
                             <input type="checkbox" checked class="rounded text-blue-600 focus:ring-blue-500">
-                            <span class="text-sm text-gray-600">Business</span>
+                            <span class="text-sm text-gray-600">5 Stars</span>
                         </label>
                         <label class="flex items-center gap-2">
                             <input type="checkbox" class="rounded text-blue-600 focus:ring-blue-500">
-                            <span class="text-sm text-gray-600">First</span>
+                            <span class="text-sm text-gray-600">4 Stars</span>
                         </label>
                     </div>
                 </div>
@@ -105,10 +120,6 @@
                             <input type="checkbox" checked class="rounded text-blue-600 focus:ring-blue-500">
                             <span class="text-sm text-gray-600">Amex Membership Rewards</span>
                         </label>
-                        <label class="flex items-center gap-2">
-                            <input type="checkbox" checked class="rounded text-blue-600 focus:ring-blue-500">
-                            <span class="text-sm text-gray-600">Citi ThankYou</span>
-                        </label>
                     </div>
                 </div>
             </div>
@@ -116,111 +127,108 @@
             <!-- Results List -->
             <div class="flex-1 space-y-4">
                 <div class="flex justify-between items-center mb-4">
-                    <h2 class="text-lg font-bold text-gray-900">3 Flights Found</h2>
+                    <h2 class="text-lg font-bold text-gray-900">3 Hotels Found in Kyoto</h2>
                     <div class="flex items-center gap-2 text-sm text-gray-500">
                         Sort by: 
                         <select class="border-none bg-transparent font-medium text-gray-900 focus:ring-0 cursor-pointer">
                             <option>Best Value</option>
                             <option>Lowest Points</option>
-                            <option>Quickest</option>
+                            <option>Highest Rating</option>
                         </select>
                     </div>
                 </div>
 
                 <!-- Result Card 1 -->
                 <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-5 hover:shadow-md transition-shadow">
-                    <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-                        <div class="flex items-center gap-4 w-full md:w-auto">
-                            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/98/Virgin_Atlantic_logo.svg/1200px-Virgin_Atlantic_logo.svg.png" alt="VA" class="h-10 w-10 object-contain rounded-full bg-gray-50 p-1">
+                    <div class="flex flex-col md:flex-row justify-between items-start gap-4">
+                        <div class="flex items-start gap-4 w-full md:w-auto">
+                            <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&h=200&q=80" alt="PH Kyoto" class="h-32 w-32 object-cover rounded-lg">
                             <div>
                                 <div class="flex items-center gap-2">
-                                    <span class="font-bold text-lg text-gray-900">18:30</span>
-                                    <span class="text-gray-400 text-sm">-</span>
-                                    <span class="font-bold text-lg text-gray-900">06:50</span>
-                                    <span class="text-green-600 text-xs font-bold bg-green-50 px-2 py-0.5 rounded ml-2">+1</span>
+                                    <span class="font-bold text-xl text-gray-900">Park Hyatt Kyoto</span>
+                                    <span class="text-yellow-400 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
                                 </div>
-                                <div class="text-sm text-gray-500">JFK - LHR • Non-stop • 7h 20m</div>
-                                <div class="text-xs text-blue-600 font-medium mt-1">Virgin Atlantic • A350-1000</div>
+                                <div class="text-sm text-gray-500 mb-1">Higashiyama Ward • 0.5 miles from center</div>
+                                <div class="text-xs text-blue-600 font-medium bg-blue-50 inline-block px-2 py-1 rounded">Hyatt • Category 8</div>
+                                <div class="mt-3 flex items-center gap-4 text-xs text-gray-500">
+                                    <span class="flex items-center gap-1"><i class="fa-solid fa-wifi"></i> Free Wi-Fi</span>
+                                    <span class="flex items-center gap-1"><i class="fa-solid fa-spa"></i> Spa</span>
+                                    <span class="flex items-center gap-1"><i class="fa-solid fa-utensils"></i> Restaurant</span>
+                                </div>
                             </div>
                         </div>
-                        <div class="flex flex-col items-end gap-2 w-full md:w-auto">
+                        <div class="flex flex-col items-end gap-2 w-full md:w-auto min-w-[160px]">
                             <div class="text-right">
-                                <span class="block text-2xl font-bold text-blue-600">15,000 pts</span>
-                                <span class="block text-xs text-gray-500">+$150 taxes</span>
+                                <span class="block text-3xl font-bold text-blue-600">45,000 pts</span>
+                                <span class="block text-sm text-gray-400 line-through">$1,850 cash</span>
+                                <span class="block text-xs text-green-600 font-bold mt-1">Value: 4.1 cpp</span>
                             </div>
-                            <button class="bg-blue-600 text-white px-6 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 w-full md:w-auto">
+                            <button class="bg-blue-600 text-white px-6 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 w-full mt-2">
                                 View Deal
                             </button>
                         </div>
-                    </div>
-                    <div class="mt-4 pt-4 border-t border-gray-100 flex gap-4 text-xs text-gray-500">
-                        <span class="flex items-center gap-1"><i class="fa-solid fa-chair text-blue-400"></i> 4 Seats Left</span>
-                        <span class="flex items-center gap-1"><i class="fa-solid fa-bed text-blue-400"></i> Lie-flat Bed</span>
-                        <span class="flex items-center gap-1"><i class="fa-solid fa-wifi text-blue-400"></i> Wi-Fi Available</span>
                     </div>
                 </div>
 
                 <!-- Result Card 2 -->
                 <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-5 hover:shadow-md transition-shadow">
-                    <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-                        <div class="flex items-center gap-4 w-full md:w-auto">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Emirates_logo.svg/1200px-Emirates_logo.svg.png" alt="Emirates" class="h-10 w-10 object-contain rounded-full bg-gray-50 p-1">
+                    <div class="flex flex-col md:flex-row justify-between items-start gap-4">
+                        <div class="flex items-start gap-4 w-full md:w-auto">
+                            <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&h=200&q=80" alt="Ritz Kyoto" class="h-32 w-32 object-cover rounded-lg">
                             <div>
                                 <div class="flex items-center gap-2">
-                                    <span class="font-bold text-lg text-gray-900">22:20</span>
-                                    <span class="text-gray-400 text-sm">-</span>
-                                    <span class="font-bold text-lg text-gray-900">10:20</span>
-                                    <span class="text-green-600 text-xs font-bold bg-green-50 px-2 py-0.5 rounded ml-2">+1</span>
+                                    <span class="font-bold text-xl text-gray-900">The Ritz-Carlton, Kyoto</span>
+                                    <span class="text-yellow-400 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
                                 </div>
-                                <div class="text-sm text-gray-500">JFK - MXP - LHR • 1 Stop • 14h 00m</div>
-                                <div class="text-xs text-blue-600 font-medium mt-1">Emirates • A380 (Fifth Freedom)</div>
+                                <div class="text-sm text-gray-500 mb-1">Kamogawa River • 1.2 miles from center</div>
+                                <div class="text-xs text-blue-600 font-medium bg-blue-50 inline-block px-2 py-1 rounded">Marriott • Luxury</div>
+                                <div class="mt-3 flex items-center gap-4 text-xs text-gray-500">
+                                    <span class="flex items-center gap-1"><i class="fa-solid fa-water"></i> River View</span>
+                                    <span class="flex items-center gap-1"><i class="fa-solid fa-person-swimming"></i> Pool</span>
+                                </div>
                             </div>
                         </div>
-                        <div class="flex flex-col items-end gap-2 w-full md:w-auto">
+                        <div class="flex flex-col items-end gap-2 w-full md:w-auto min-w-[160px]">
                             <div class="text-right">
-                                <span class="block text-2xl font-bold text-blue-600">45,000 pts</span>
-                                <span class="block text-xs text-gray-500">+$80 taxes</span>
+                                <span class="block text-3xl font-bold text-blue-600">85,000 pts</span>
+                                <span class="block text-sm text-gray-400 line-through">$1,600 cash</span>
+                                <span class="block text-xs text-green-600 font-bold mt-1">Value: 1.9 cpp</span>
                             </div>
-                            <button class="bg-blue-600 text-white px-6 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 w-full md:w-auto">
+                            <button class="bg-blue-600 text-white px-6 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 w-full mt-2">
                                 View Deal
                             </button>
                         </div>
-                    </div>
-                    <div class="mt-4 pt-4 border-t border-gray-100 flex gap-4 text-xs text-gray-500">
-                        <span class="flex items-center gap-1"><i class="fa-solid fa-chair text-blue-400"></i> 2 Seats Left</span>
-                        <span class="flex items-center gap-1"><i class="fa-solid fa-glass-cheers text-blue-400"></i> Onboard Bar</span>
                     </div>
                 </div>
 
-                <!-- Result Card 3 (British Airways) -->
-                <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-5 hover:shadow-md transition-shadow opacity-75">
-                    <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-                        <div class="flex items-center gap-4 w-full md:w-auto">
-                            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b3/British_Airways_2013_logo.svg/1200px-British_Airways_2013_logo.svg.png" alt="BA" class="h-10 w-10 object-contain rounded-full bg-gray-50 p-1">
+                <!-- Result Card 3 -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-5 hover:shadow-md transition-shadow">
+                    <div class="flex flex-col md:flex-row justify-between items-start gap-4">
+                        <div class="flex items-start gap-4 w-full md:w-auto">
+                            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&h=200&q=80" alt="ROKU KYOTO" class="h-32 w-32 object-cover rounded-lg">
                             <div>
                                 <div class="flex items-center gap-2">
-                                    <span class="font-bold text-lg text-gray-900">19:00</span>
-                                    <span class="text-gray-400 text-sm">-</span>
-                                    <span class="font-bold text-lg text-gray-900">07:00</span>
-                                    <span class="text-green-600 text-xs font-bold bg-green-50 px-2 py-0.5 rounded ml-2">+1</span>
+                                    <span class="font-bold text-xl text-gray-900">ROKU KYOTO, LXR Hotels</span>
+                                    <span class="text-yellow-400 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
                                 </div>
-                                <div class="text-sm text-gray-500">JFK - LHR • Non-stop • 7h 00m</div>
-                                <div class="text-xs text-blue-600 font-medium mt-1">British Airways • 777-300ER</div>
+                                <div class="text-sm text-gray-500 mb-1">Northern Kyoto • 4.0 miles from center</div>
+                                <div class="text-xs text-blue-600 font-medium bg-blue-50 inline-block px-2 py-1 rounded">Hilton • LXR</div>
+                                <div class="mt-3 flex items-center gap-4 text-xs text-gray-500">
+                                    <span class="flex items-center gap-1"><i class="fa-solid fa-tree"></i> Nature Retreat</span>
+                                    <span class="flex items-center gap-1"><i class="fa-solid fa-hot-tub-person"></i> Onsen</span>
+                                </div>
                             </div>
                         </div>
-                        <div class="flex flex-col items-end gap-2 w-full md:w-auto">
+                        <div class="flex flex-col items-end gap-2 w-full md:w-auto min-w-[160px]">
                             <div class="text-right">
-                                <span class="block text-2xl font-bold text-gray-900">60,000 pts</span>
-                                <span class="block text-xs text-gray-500">+$400 taxes</span>
+                                <span class="block text-3xl font-bold text-gray-900">110,000 pts</span>
+                                <span class="block text-sm text-gray-400 line-through">$1,100 cash</span>
+                                <span class="block text-xs text-orange-500 font-bold mt-1">Value: 1.0 cpp</span>
                             </div>
-                            <button class="bg-gray-100 text-gray-600 px-6 py-2 rounded-lg text-sm font-medium hover:bg-gray-200 w-full md:w-auto">
+                            <button class="bg-gray-100 text-gray-600 px-6 py-2 rounded-lg text-sm font-medium hover:bg-gray-200 w-full mt-2">
                                 View Deal
                             </button>
                         </div>
-                    </div>
-                    <div class="mt-4 pt-4 border-t border-gray-100 flex gap-4 text-xs text-gray-500">
-                        <span class="flex items-center gap-1"><i class="fa-solid fa-chair text-gray-400"></i> 8 Seats Left</span>
-                        <span class="text-orange-500 font-medium text-xs">High Surcharges</span>
                     </div>
                 </div>
 
